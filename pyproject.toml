@@ -1,0 +1,20 @@
+[project]
+name = "get_latest_weather"
+version = "0.1.0"
+description = "get-latest-weather using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<=3.13"
+dependencies = [
+    "crewai[tools]>=0.86.0,<1.0.0"
+]
+
+[project.scripts]
+get_latest_weather = "get_latest_weather.main:run"
+run_crew = "get_latest_weather.main:run"
+train = "get_latest_weather.main:train"
+replay = "get_latest_weather.main:replay"
+test = "get_latest_weather.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

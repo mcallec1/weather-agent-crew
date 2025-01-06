@@ -1,0 +1,13 @@
+get_city_coordinates_task:
+  description: >
+    Convert the city name "{city}" into latitude and longitude coordinates
+  expected_output: >
+    Precise latitude and longitude coordinates for {city}
+  agent: geocoding_expert
+
+get_latest_weather_task:
+  description: >
+    Get the current weather information using the coordinates provided by the geocoding expert for {city}
+  expected_output: >
+    Detailed current weather information including temperature, humidity, and conditions for {city}
+  agent: weather_expert
